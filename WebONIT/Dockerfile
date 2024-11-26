@@ -12,10 +12,10 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["WebONIT.csproj", "."]
-RUN dotnet restore "./WebONIT.csproj"
+COPY ["WebONIT/WebONIT.csproj", "."]
+RUN dotnet restore "./WebONIT/WebONIT.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/WebONIT"
 RUN dotnet build "./WebONIT.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
