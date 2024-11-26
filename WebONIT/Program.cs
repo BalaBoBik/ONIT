@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // Подключать свою Базу Данных тут \|/
 builder.Services.AddDbContext<OnitDbContext>(opt =>
-    opt.UseNpgsql("Host = localhost; Port = 5430; Database = onitdb; Username = postgres; Password = 123;"));
+    opt.UseNpgsql("Host = 154.194.53.250; Port = 5432; Database = labadb; Username = balabol; Password = 123;"));
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 builder.Services.AddCors(options =>
