@@ -15,7 +15,7 @@ namespace WebONIT.Managers
         public async Task<Student> AddStudent(CreateStudentRequest createStudentRequest)
         {
             if (_dbContext.Students.Any(x => x.RecordBookNumber == createStudentRequest.RecordBookNumber))
-                throw new Exception($"{createStudentRequest.RecordBookNumber} - этот номер зачетной книжки уже занят"); //sdgshs
+                throw new Exception($"{createStudentRequest.RecordBookNumber} - этот номер зачетной книжки уже занят"); //sdgsfassf
 
             Student newStudent = new Student()
             {
